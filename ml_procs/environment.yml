@@ -1,0 +1,8 @@
+name: fastai
+channels:
+  - pytorch
+  - fastai
+  - defaults
+dependencies:
+  - fastai
+  - ipython
