@@ -12,16 +12,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/upload-image', upload.single('animal-image'), function(req, res, next) {
   let { spawn } = require('child_process');
-  
-  /*
-  let ml_proc = spawn('/home/david/anaconda3/envs/fastai/bin/python', 
-    [ 'animal_predict.py',
-      '../tmp/uploads/' + req.file.filename],
-    { cwd: path.join(__dirname, '../ml_procs') }
-  );
-  */
-
-  let ml_proc = spawn('conda', ['run', '-n', 'fastai', 'python', 'animal_predict.py', '../tmp/uploads/' + req.file.filename],
+  let ml_proc = spawn('python', ['animal_predict.py', '../tmp/uploads/' + req.file.filename],
     { cwd: path.join(__dirname, '../ml_procs') });
 
   let proc_output = "";
