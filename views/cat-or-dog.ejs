@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Error</title>
+		<title>Cat/Dog Classifier</title>
 		<link rel="icon" href="/images/ai-icon.svg" type = "image/x-icon" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -19,14 +19,23 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-                            <h1><%= message %></h1>
-                            <h2><%= error.status %></h2>
-                            <pre><%= error.stack %></pre>
-                        </div>
+							<h1>Cat or Dog?</h1>
+							<p>This is a convolutional neural network that labels images as "cat" or "dog." You can submit a photo of your own and see how well the model does.</p>
+							<hr />
+							<h2>Submit your own photo</h2>
+							<form action='/upload-image' method='post' enctype='multipart/form-data'>
+								<input type='file' name='animal-image' accept='image/*'/>
+								<br />
+								<br />
+								<input type='submit' value='Submit'/>
+							</form>
+						</div>
 					</div>
-			
+
+				<%- include('partials/footer') %>
+
 			</div>
-			
+
 		<%- include('partials/scripts') %>
 
 	</body>

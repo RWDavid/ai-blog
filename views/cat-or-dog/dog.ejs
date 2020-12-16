@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Error</title>
+		<title>Result</title>
 		<link rel="icon" href="/images/ai-icon.svg" type = "image/x-icon" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -12,22 +12,25 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<%- include('partials/header') %>
+				<%- include('../partials/header') %>
 
-				<%- include('partials/menu') %>
+				<%- include('../partials/menu') %>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-                            <h1><%= message %></h1>
-                            <h2><%= error.status %></h2>
-                            <pre><%= error.stack %></pre>
-                        </div>
-					</div>
-			
+							<h1>Result</h1>
+                            <p>This is a dog.</p>
+                            <span class="image main"><img src="/images/dog.png" style="width: 10%; margin-left: auto; margin-right: auto;" /></span>
+						</div>
+                    </div>
+                    
+
+				<%- include('../partials/footer') %>
+
 			</div>
-			
-		<%- include('partials/scripts') %>
+
+		<%- include('../partials/scripts') %>
 
 	</body>
 </html>

@@ -1,15 +1,71 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <title>AI Blog</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>Cat or Dog?</h1>
-    <p>Upload a picture here.</p>
-    <form action='/upload-image' method='post' enctype='multipart/form-data'>
-      <input type='file' name='animal-image'/>
-      <input type='submit' value='Submit'/>
-    </form>
-  </body>
+	<head>
+		<title>AI Blog</title>
+		<link rel="icon" href="/images/ai-icon.svg" type = "image/x-icon" /> 
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<%- include('partials/header') %>
+
+				<%- include('partials/menu') %>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>Welcome to my personal blog on artificial intelligence.</h1>
+								<p>My name is David Choi. I am a high school student from America who is studying computer science and machine learning. This website is a portfolio for my senior graduation project at Seneca Valley Senior High School.</p>
+							</header>
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="/images/pic01.jpg" alt="" />
+									</span>
+									<a href="/about-me">
+										<h2>About Me</h2>
+										<div class="content">
+											<p>Click here to learn more about me.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="/images/pic02.jpg" alt="" />
+									</span>
+									<a href="/fastai">
+										<h2>fastai</h2>
+										<div class="content">
+											<p>Click here for a collection of summaries and questionnaire answers for the fastai book.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="/images/pic03.jpg" alt="" />
+									</span>
+									<a href="/cat-or-dog">
+										<h2>Cat or Dog Classifier</h2>
+										<div class="content">
+											<p>Click here to see a basic cat/dog classifer.</p>
+										</div>
+									</a>
+								</article>
+							</section>
+						</div>
+					</div>
+
+				<%- include('partials/footer') %>
+
+			</div>
+
+		<%- include('partials/scripts') %>
+
+	</body>
 </html>

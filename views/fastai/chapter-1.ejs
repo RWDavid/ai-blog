@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>fastai - Chapter 1</title>
+		<link rel="icon" href="/images/ai-icon.svg" type = "image/x-icon" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<%- include('../partials/header') %>
+
+				<%- include('../partials/menu') %>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>fastai: Chapter 1</h1>
+							<h2>Summary</h2>
+							<p>
+                                Chapter 1 introduces the field of machine learning from a layman’s perspective. 
+                                It first discards the notion that only math PhDs or large tech companies can create 
+                                state of the art machine learning models. In fact, the book stresses that no 
+                                complex math is needed, gigabytes of training data are unnecessary, and high 
+                                computing power is not required. Anyone with some programming skills can create 
+                                state of the art models in natural language processing, computer vision, medicine, 
+                                science, and countless other fields. Finally, the chapter describes from a surface 
+                                level how neural networks learn and make predictions.
+							</p>
+							<hr />
+							<h2>Questionnaire</h2>
+
+                            <blockquote><strong>
+                                Do you need these for deep learning?
+                                <ul style="margin-bottom: 0px;">
+                                    <li>Lots of math</li>
+                                    <li>Lots of data</li>
+                                    <li>Lots of expensive computers</li>
+                                    <li>A PhD</li>
+                                </ul>
+                            </strong></blockquote>
+
+                            <p>You do not need lots of math. When using the fast.ai library (or another modern machine learning library), a lot of the complex math is abstracted away. The fast.ai + PyTorch stack is very capable of creating state-of-the-art models and only requires high school level math.</p>
+                            <p>You do not need lots of data. If you want to train a state-of-the-art model from scratch, you will need to use a lot of data. However, a fair amount of machine learning problems can be solved using transfer learning. This technique essentially takes a pre-trained state-of-the-art model on one problem and adapts the model for a different problem. Transfer learning does not require much data and will often yield state-of-the-art results.</p>
+                            <p>You do not need lots of expensive computers. Transfer learning is able to harness the power of pre-trained models and achieve state-of-the-art results without much computational power.</p>
+                            <p>You do not need a PhD. Modern machine learning libraries abstract away many of the complex algorithms/mathematics that underlie deep learning models. Virtually anyone with coding skills is capable of training state-of-the-art models.</p>
+                            
+                            <blockquote><strong>Name five areas where deep learning is now the best tool in the world.</strong></blockquote>
+                            <p>
+                                Five areas which are of particular interest to me:
+                                <ul>
+                                    <li>Text generation / chat bots</li>
+                                    <li>Automatic language translation</li>
+                                    <li>Text summarization</li>
+                                    <li>Image classification and segmentation</li>
+                                    <li>Image generation / super resolution / noise reduction</li>
+                                </ul>
+                                
+                            </p>
+
+                            <blockquote><strong>What was the name of the first device that was based on the principle of the artificial neuron?</strong></blockquote>
+                            <p>This is called the perceptron. It essentially is a computerized version of the human neuron that outputs either a 0 or 1 based on a sum of weighted inputs. One use case involved classifying simple shapes.</p>
+
+                            <blockquote><strong>Based on the book of the same name, what are the requirements for parallel distributed processing (PDP)?</strong></blockquote>
+                            <p>
+                                The requirements for parallel distributed processing (one of the first conceptual frameworks for machine learning) are:
+                                <ul>
+                                    <li>A set of processing units</li>
+                                    <li>A state of activation</li>
+                                    <li>An output function for each unit</li>
+                                    <li>A pattern of connectivity among units</li>
+                                    <li>A propagation rule for propagating patterns of activities through the network of connectivities</li>
+                                    <li>An activation rule for combining the inputs impinging on a unit with the current state of that unit to produce an output for the unit</li>
+                                    <li>A learning rule whereby patterns of connectivity are modified by experience</li>
+                                    <li>An environment within which the system must operate</li>
+                                </ul>
+                            </p>
+
+                            <blockquote><strong>What were the two theoretical misunderstandings that held back the field of neural networks?</strong></blockquote>
+                            <p>
+                                Initially, American computer scientist Marvin Minsky proved two statements:
+                                <ol>
+                                    <li>A single layer of perceptrons are not capable of solving/replicating simple mathematical functions (a notable one called the XOR function).</li>
+                                    <li>Two layers of perceptrons are capable of solving/replicating any mathematical function.</li>
+                                </ol>
+                                The first statement led people to believe that neural networks were not powerful enough to achieve significant results (despite the fact that two layers open the gateway to arbitrary mathematical replication).
+                                Two decades later, the field of neural networks was hindered by the second statement. People expected that neural networks with two layers would achieve great performance, when in practice, neural networks need multiple layers to be successful. Therefore, researchers did not realize the full potential of neural networks.
+                            </p>
+
+                            <blockquote><strong>What is a GPU?</strong></blockquote>
+                            <p>A GPU is a graphics processing unit. GPUs are especially useful for training neural networks as they are able to run several calculations simultaneously as opposed to the CPU (central processing unit).</p>
+
+                            <blockquote><strong>Open a notebook and execute a cell containing: 1+1. What happens?</strong></blockquote>
+                            <p>This question refers to a program called the Jupyter Notebook. In a notebook, Jupyter is capable of executing “cells” of commands in Python, one of which could be “1+1”. In this case, the notebook would output a result of “2”.</p>
+
+                            <blockquote><strong>Follow through each cell of the stripped version of the notebook for this chapter. Before executing each cell, guess what will happen.</strong></blockquote>
+                            <p>This question refers to the notebooks provided by fast.ai that accompany their lessons.</p>
+
+                            <blockquote><strong>Complete the Jupyter Notebook online appendix.</strong></blockquote>
+                            <p>This question refers to a tutorial notebook provided by fast.ai in order to familiarize the reader with Jupyter.</p>
+
+                            <blockquote><strong>Why is it hard to use a traditional computer program to recognize images in a photo?</strong></blockquote>
+                            <p>Traditional computer programs rely on meticulous step-by-step instructions provided by the programmer. However, it is difficult for the programmer to provide accurate instructions in such a free-form task such as image recognition. For example, differentiating cats from dogs is a task that depends on breed, lighting, angle, among other factors.</p>
+
+                            <blockquote><strong>What did IBM Researcher Arthur Samuel mean by “weight assignment”?</strong></blockquote>
+                            <p>Weights are used in order to prioritize certain inputs over other inputs throughout the layers of a neural network. A particular weight assignment refers to a specific set of weights to be used while computing the result of a neural network.</p>
+
+                            <blockquote><strong>What term do we normally use in deep learning for what Samuel called “weights”?</strong></blockquote>
+                            <p>Modern deep learning practitioners use the term “parameters” instead of “weight”.</p>
+
+                            <blockquote><strong>Draw a picture that summarizes Samuel’s view of a machine learning model.</strong></blockquote>
+                            <p><img src="/images/samuel-machine-learning.png"></p>
+
+                            <blockquote><strong>Why is it hard to understand why a deep learning model makes a particular prediction?</strong></blockquote>
+                            <p>Deep learning models often involve thousands of computations that are hard to attribute meaning to. There are no formulas or footnotes that detail the computations of a neural network. It is simply a network of neurons that are connected in sophisticated ways, optimized to lower it’s rate of error on a specific task.</p>
+
+                            <blockquote><strong>What is the name of the theorem that shows that a neural network can solve any mathematical problem to any level of accuracy?</strong></blockquote>
+                            <p>This is called the Universal Approximation Theorem.</p>
+
+                            <blockquote><strong>What do you need in order to train a model?</strong></blockquote>
+                            <p>You need some data and some computational power.</p>
+
+                            <blockquote><strong>How could a feedback loop impact the rollout of a predictive policing model?</strong></blockquote>
+                            <p>Imagine a predictive policing model that is trained based on a town’s existing arrest records. The records may indicate that black people are arrested at a higher rate than white people, when actually both races commit the same number of crimes. It is therefore reasonable to conclude that the police force is prejudiced against black people in this town. However, the predictive policing model will use these records and predict that further arrests will be made in black communities. This will in turn cause disproportionately higher black arrests that can then be fed back into the predictive model. This is a feedback loop.</p>
+
+                            <blockquote><strong>Do we always have to use 224×224-pixel images with the cat recognition model?</strong></blockquote>
+                            <p>Although 224x224-pixel images used to be the historical standard for particular image models, smaller and larger resolutions can also be used. The trade-off will be that smaller resolutions will yield less accurate results with less computational power, while larger resolutions will yield more accurate results with more computational power.</p>
+
+                            <blockquote><strong>What is the difference between classification and regression?</strong></blockquote>
+                            <p>Classification refers to the practice of labeling an input with one or more classes from a discrete set of classes. Regression refers to the practice of assigning one or more real numbers from continuous intervals.</p>
+
+                            <blockquote><strong>What is a validation set? What is a test set? Why do we need them?</strong></blockquote>
+                            <p>A training set is used to train the model. The validation set (not yet seen by the model) is used to ensure that the model is generalizing the data set correctly and not memorizing the peculiarities of the training data. The programmer would then utilize the validation set a few times while changing certain hyperparameters to optimize the performance of the model. The test set is used at the very end of the process to evaluate the true accuracy/performance of the model. The validation set will not give an entirely accurate assessment of the model’s performance because the user optimized the model based on the validation set.</p>
+
+                            <blockquote><strong>What will fastai do if you don’t provide a validation set?</strong></blockquote>
+                            <p>The fastai library will automatically set aside a portion of the data provided as a validation set.</p>
+
+                            <blockquote><strong>Can we always use a random sample for a validation set? Why or why not?</strong></blockquote>
+                            <p>Validation sets need to be chosen carefully. Ideally, validation sets should be representative of the type of data that the model will see in the future. In time series data (for example, financial charts/graphs), the data points may oscillate in a sinusoidal manner while still maintaining an upwards trajectory. In this case, it is not enough to randomly select a fraction of data points from the entire data set as the validation set. This is because it is too easy to infer the validation data set from the surrounding data points in the training data set. Instead, the programmer should split the validation data from the test data at a specific point in time. That way, the validation data is temporally separate from the test data.</p>
+
+                            <blockquote><strong>What is overfitting? Provide an example.</strong></blockquote>
+                            <p>Overfitting refers to when a model memorizes the peculiarities of its training data in order to minimize its error during training. (This is not desired as it usually indicates that the model is not generalizing, it is simply memorizing.) An example would be a cat vs dog classifier with limited data. If a person simply provides 5 photos of cats and 5 photos of dogs, the image classifier may differentiate the images through a particular background or fur color. In this case, the image classifier is not picking up on the general characteristics of cats or dogs but is instead picking up on peculiarities.</p>
+
+                            <blockquote><strong>What is a metric? How does it differ from loss?</strong></blockquote>
+                            <p>A metric is simply a measure of performance designed for human consumption/interpretation. This might be an error percentage. A loss is a measure of performance to be used when training a model. A loss could simply be a number that the model is trying to minimize and may not convey as much significance to humans.</p>
+
+                            <blockquote><strong>How can pretrained models help?</strong></blockquote>
+                            <p>Pretrained models can significantly cut down on data and computational power requirements.</p>
+
+                            <blockquote><strong>What is the “head” of a model?</strong></blockquote>
+                            <p>The head of a model refers to the last layer of a neural network that is adapted to a particular set of outputs/classes. For example, a cat vs dog classifier would have a head of two neurons, as the neural network should only output “cat” or “dog”.</p>
+
+                            <blockquote><strong>What kinds of features do the early layers of a CNN find? How about the later layers?</strong></blockquote>
+                            <p>A CNN (convolutional neural network) is a type of image model that can classify image data. Typically, in multi-layered CNNs, the earlier layers focus on detecting primitive elements such as edges. As the information progresses through the layers, the layers increasingly focus on detecting broader elements based on the results of previous layers. The final layers finally focus on detecting things like cats/dogs.</p>
+
+                            <blockquote><strong>Are image models useful only for photos?</strong></blockquote>
+                            <p>No. Image models are extremely versatile and can be used for almost any type of data. Audio can be converted to images using spectrograms. If a programmer is particularly clever, they can convert things like computer programs/viruses into distinctive images to be classified.</p>
+
+                            <blockquote><strong>What is an architecture?</strong></blockquote>
+                            <p>An architecture represents a specific template for a neural network, including the types of layers involved, the number of layers involved, and the number of neurons in each layer.</p>
+
+                            <blockquote><strong>What is segmentation?</strong></blockquote>
+                            <p>Segmentation is a computer vision process that classifies every pixel in an image as belonging to a specific class. For example, self-driving cars utilize segmentation in a single image to differentiate humans from roads, sidewalks, stop signs, etc.</p>
+
+                            <blockquote><strong>What is y_range used for? When do we need it?</strong></blockquote>
+                            <p>Y_range is a parameter in the fast.ai library used to specify a continuous output for the neural network. Instead of outputting a discrete classification (e.g. cat/dog), the neural network could output a number of a range of values (e.g. a movie rating from 0.0 to 5.0 stars).</p>
+
+                            <blockquote><strong>What are hyperparameters?</strong></blockquote>
+                            <p>Hyperparameters refer to the higher-level parameters that govern parameters (historically referred to as weights). Hyperparameters could include the number of neurons in each layer, how fast the model adjusts, and the specific optimization method used to train the model.</p>
+
+                            <blockquote><strong>What’s the best way to avoid failures when using AI in an organization?</strong></blockquote>
+                            <p>The best way to avoid failure is to provide machine learning programmers with enough data to work with while reserving a special “test” data set. When the machine learning model is built, the special data set should be used to test the performance of the model. Since the model has not seen this special data set before, it will serve as a measure of performance for the model. Based on the results, the organization may decide to go forward with the model or reject the model.</p>
+
+						</div>
+					</div>
+
+				<%- include('../partials/footer') %>
+
+			</div>
+
+		<%- include('../partials/scripts') %>
+
+	</body>
+</html>
