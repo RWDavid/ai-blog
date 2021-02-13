@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>fastai - Chapter 2</title>
+		<link rel="icon" href="/images/ai-icon.svg" type = "image/x-icon" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<%- include('../partials/header') %>
+
+				<%- include('../partials/menu') %>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>fastai: Chapter 2</h1>
+							<h2>Summary</h2>
+							<p>
+                                Chapter 2 is all about getting started with machine learning projects.
+                                It goes into the current capabilities of deep learning and the process of choosing a good project as a beginner.
+                                It then provides a conceptual framework called the Drivetrain Approach for designing a machine learning product.
+                                This chapter also delves deeper into the fastai library, explaining the more fundamental parts of data management.
+                                All of this is done through a Jupyter Notebook, a programming file/environment.
+                                This chapter also details how to easily deploy Jupyter Notebooks on the Internet,
+                                making it accessible to people across the world.
+                                Finally, the chapter ends with a discussion on the practical issues of deploying a model in production.
+							</p>
+							<hr />
+							<h2>Questionnaire</h2>
+
+                            <blockquote><strong>Where do text models currently have a major deficiency?</strong></blockquote>
+
+                            <p>Text models are currently capable of generating compelling (that is, convincing) text. For example, a text model could create tweets that are convincingly human. However, text models are not guaranteed to generate factually correct information. Therefore, there are risks associated with using text models to answer questions and provide reliable information.</p>
+                            
+                            <blockquote><strong>What are possible negative societal implications of text generation models?</strong></blockquote>
+                            
+                            <p>Because text generation models are able to create massive amounts of compelling (and potentially misleading) text, they can be used as spammers and troll accounts on various internet platforms. Without an effective way to filter posts, a large portion of the data posted online could be misinformation.</p>
+                            
+                            <blockquote><strong>In situations where a model might make mistakes, and those mistakes could be harmful, what is a good alternative to automating a process?</strong></blockquote>
+                            
+                            <p>Machine learning models can be integrated into the existing human processes in order to boost productivity or efficiency. For example, radiologists can investigate CT scans normally while models are running in parallel to identify scans that warrant more attention.</p>
+                            
+                            <blockquote><strong>What kind of tabular data is deep learning particularly good at?</strong></blockquote>
+                            
+                            <p>Deep learning is a flexible tool for tabular data, in that there are many types of data that you can use as input. Some columns can contain text (book titles, reviews) or high-cardinality discrete values (zip codes). The primary strength of deep learning is incorporating diverse types of inputs to aid its predictions.</p>
+                            
+                            <blockquote><strong>What’s a key downside of directly using a deep learning model for recommendation systems?</strong></blockquote>
+                            
+                            <p>Deep learning models are good at predicting what a user might like, which is not necessarily what a user would buy. If a person were to buy the seventh book of the Harry Potter book series, the website might prioritize recommending the user more Harry Potter books (which is redundant, as the customer clearly does not need the earlier books in the series). A good librarian would perhaps rely on their knowledge of similar book franchises to give more useful recommendations.</p>
+                            
+                            <blockquote><strong>What are the steps of the Drivetrain Approach?</strong></blockquote>
+                            
+                            <p>The Drivetrain Approach is an outline for designing useful predictive models and involves four steps. The first step is to clearly define the object. The second step is to determine what “levers”, or mechanisms, one can manipulate to achieve the objective. The third step is to collect relevant data. The fourth step is to create a model that manipulates the levers to influence the objective.</p>
+                            
+                            <blockquote><strong>How do the steps of the Drivetrain Approach map to a recommendation system?</strong></blockquote>
+                            
+                            <p>The first step is to clearly define the objective. Suppose we are creating a recommendation system for an online store. The main objective of a recommendation system is to spotlight new products that the customer would want to buy.</p>
+                            
+                            <p>The second step is to determine what “levers”, or mechanisms, we can manipulate to achieve our objective. In this case, our main mechanism is how we select and rank the recommended products to the customer.</p>
+                            
+                            <p>The third step is to collect relevant data. Perhaps we can build a set of potential recommendations by analyzing many customers’ previous purchases. By linking together products that are frequently bought together, we can recommend one product when a customer looks at its paired product.</p>
+                            
+                            <p>The final step is to create a model that manipulates our levers to influence our objective. Through machine learning, we can evaluate and train our current set of levers by seeing how frequently a customer buys the recommended product.</p>
+                            
+                            <blockquote><strong>What is DataLoaders?</strong></blockquote>
+                            
+                            <p>DataLoaders is a class in fastai that wraps (usually two) DataLoader objects into a neat little package. From there, the entire data set can be accessed through the DataLoaders object. The two DataLoader objects are usually for feeding training data and testing data. </p>
+                            
+                            <blockquote><strong>What four things do we need to tell fastai to create DataLoaders?</strong></blockquote>
+                            
+                            <p>A DataLoaders object can be created through a DataBlock object. Through a DataBlock object, you must specify four things: the type of input and output data we are using, a way of obtaining a list of our input data, a way of labeling the input data, and a way of creating a validation data set.</p>
+                            
+                            <blockquote><strong>What does the splitter parameter to DataBlock do?</strong></blockquote>
+                            
+                            <p>The splitter parameter accepts a callback function that provides two lists of indices that designate the training data and validation data. Essentially, it is the way that the validation set is created.</p>
+                            
+                            <blockquote><strong>How do we ensure a random split always gives the same validation set?</strong></blockquote>
+                            
+                            <p>Set the seed parameter to the same number every time in fastai’s RandomSplitter constructor to ensure consistent results.</p>
+                            
+                            <blockquote><strong>What letters are often used to signify the independent and dependent variables?</strong></blockquote>
+                            
+                            <p>The letters ‘x’ and ‘y’ are used to signify the independent and dependent variables, respectively.</p>
+                            
+                            <blockquote><strong>What’s the difference between the crop, pad, and squish resize approaches? When might you choose one over the others?</strong></blockquote>
+                            
+                            <p>Crop, pad, and squish are methods of resizing image data to feed into our neural network. Cropping allows the model to look at an object in high resolution and with realistic proportions, but it may crop out an important feature of the image. Padding maintains proportionality and ensures that all the relevant images features are analyzed, but the extraneous padding information wastes computations and the image has a smaller resolution. Squishing the image maintains a decent resolution and doesn’t add any extraneous padding, but proportions of the image will be warped.</p>
+                            
+                            <blockquote><strong>What is data augmentation? Why is it needed?</strong></blockquote>
+                            
+                            <p>Image data augmentation is the process of altering the orientation, angle, perspective, contrast, etc., of an image. Or, in general, data augmentation is the process of altering data so that it seems different but still carries the same meaning. Data augmentation forces the neural network to learn general, more abstract concepts surrounding the data rather than focusing on certain peculiarities of the data.</p>
+                            
+                            <blockquote><strong>Provide an example of where the bear classification model might work poorly in production, due to structural or style differences in the training data.</strong></blockquote>
+                            
+                            <p>The training data was scraped from Bing images, which tends to display the subject matter of images clearly. However, security camera footage might not always have clear shots of certain animals (perhaps the back of a bear is facing the camera). In this case, the model trained on Bing images may not perform as well as it did on the validation set.</p>
+                            
+                            <blockquote><strong>What is the difference between item_tfms and batch_tfms?</strong></blockquote>
+                            
+                            <p>The item_tfms parameter is a function that processes each piece of input data one at a time. The batch_tfms parameter is a function that processes batches of data at the same time, and is executed strictly after item_tfms.</p>
+                            
+                            <blockquote><strong>What is a confusion matrix?</strong></blockquote>
+                            
+                            <p>A confusion matrix is a diagnostic graphic that compares the predictions of a model against the correct values.</p>
+                            
+                            <blockquote><strong>What does export save?</strong></blockquote>
+                            
+                            <p>The export function in a fastai Learner object saves the parameters of a neural network to a single file.</p>
+                            
+                            <blockquote><strong>What is it called when we use a model for making predictions, instead of training?</strong></blockquote>
+                            
+                            <p>This is called “inference.”</p>
+                            
+                            <blockquote><strong>What are IPython widgets?</strong></blockquote>
+                            
+                            <p>IPython widgets are interactable pieces inside Jupyter Notebooks that enable extra GUI functionality, such as providing an interface to upload images, or displaying the results of a function.</p>
+                            
+                            <blockquote><strong>When would you use a CPU for deployment? When might a GPU be better?</strong></blockquote>
+                            
+                            <p>Since data does not need to be processed in parallel during deployment, CPUs are typically the way to go. GPUs might be better when working with high volumes of traffic. In this case, predictions can be made in parallel.</p>
+                            
+                            <blockquote><strong>What are the downsides of deploying your app to a server, instead of to a client (or edge) device such as a phone or PC?</strong></blockquote>
+                            
+                            <p>As the user base grows, the server must scale up its computing resources.</p>
+                            
+                            <blockquote><strong>What are three examples of problems that could occur when rolling out a bear warning system in practice?</strong></blockquote>
+                            
+                            <p>Problems include: working with video data instead of image data, ensuring that results are delivered in real time; dealing with images that have poor resolution and poor lighting.</p>
+                            
+                            <blockquote><strong>What is out-of-domain data?</strong></blockquote>
+                            
+                            <p>Out-of-domain data is data that is different in some significant way from the data used to train the model. Making inferences on out-of-domain data usually leads to poor results.</p>
+                            
+                            <blockquote><strong>What is domain shift?</strong></blockquote>
+                            
+                            <p>Domain shift is the phenomenon where the data used in production gradually turns into out-of-domain data (through changing priorities or circumstances).</p>
+                            
+                            <blockquote><strong>What are the three steps in the deployment process?</strong></blockquote>
+                            
+                            <ol>
+                                <li>Manual process: all inference work is manually inspected by a human.</li>
+                                <li>Limited scope development: inference work is carefully supervised by humans, and machine systems are deployed in smaller operations under limited time frames.</li>
+                                <li>Gradual expansion: good reporting systems are in place to check any abnormalities in inference work and potential problems/changes are constantly considered.</li>                                
+                            </ol>
+                            
+						</div>
+					</div>
+
+				<%- include('../partials/footer') %>
+
+			</div>
+
+		<%- include('../partials/scripts') %>
+
+	</body>
+</html>
