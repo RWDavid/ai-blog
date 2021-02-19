@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>fastai - Chapter 3</title>
+		<link rel="icon" href="/images/ai-icon.svg" type = "image/x-icon" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<%- include('../partials/header') %>
+
+				<%- include('../partials/menu') %>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>fastai: Chapter 3</h1>
+							<h2>Summary</h2>
+							<p>
+                                Chapter 3 deals with the ethics behind algorithms and deep learning.
+                                It first gives several examples of different ethical flaws that one might encounter when designing
+                                or using algorithmic/deep learning products. These include a lack of an appeals system, feedback
+                                loops, various biases, among others. The chapter then delves into ways of identifying and correcting
+                                these flaws, including personal, organizational, and regulatory frameworks.
+							</p>
+							<hr />
+							<h2>Questionnaire</h2>
+
+                            <blockquote><strong>Does ethics provide a list of “right answers”?</strong></blockquote>
+
+                            <p>No, the field of ethics is inherently subjective, and hence, it is difficult to objectively ascertain right or wrong answers.</p>
+                            
+                            <blockquote><strong>How can working with people of different backgrounds help when considering ethical questions?</strong></blockquote>
+                            
+                            <p>People of different backgrounds can empathize with different groups of people and can also have different ways of thinking. Therefore, these people can bring up relevant concerns that might not be obvious to other people.</p>
+                            
+                            <blockquote><strong>What was the role of IBM in Nazi Germany? Why did the company participate as it did? Why did the workers participate?</strong></blockquote>
+                            
+                            <p>IBM provided Nazi Germany technical assistance in systematically identifying and murdering millions of people. The company was operating based on profit incentives. The workers were more concerned with keeping their jobs, and perhaps through apathy or willful ignorance, blindly followed orders.</p>
+                            
+                            <blockquote><strong>What was the role of the first person jailed in the Volkswagen diesel scandal?</strong></blockquote>
+                            
+                            <p>The first person jailed was the engineer that went along with the scandal, rather than those who orchestrated it. This demonstrates that blindly following orders does not make anyone immune from direct consequences.</p>
+                            
+                            <blockquote><strong>What was the problem with a database of suspected gang members maintained by California law enforcement officials?</strong></blockquote>
+                            
+                            <p>The system had no way of accepting appeals or removing entries from the database. Some people were mistakenly entered into the database at birth and were unable to be removed from the database.</p>
+                            
+                            <blockquote><strong>Why did YouTube’s recommendation algorithm recommend videos of partially clothed children to pedophiles, even though no employee at Google had programmed this feature?</strong></blockquote>
+                            
+                            <p>What Google had programmed was an algorithm to maximize the metric of watch time. This algorithm simply caused YouTube to cater to the interests of pedophiles.</p>
+                            
+                            <blockquote><strong>What are the problems with the centrality of metrics?</strong></blockquote>
+                            
+                            <p>The problems occur when the maximization of metrics do not align with the maximization of good. In the case of YouTube, the recommendation system found that recommending conspiracy videos helped in maximizing watch time. Clearly, conspiracy theories are detrimental to a well-functioning society, so this is an example of a dangerous metric.</p>
+                            
+                            <blockquote><strong>Why did Meetup.com not include gender in its recommendation system for tech meetups?</strong></blockquote>
+                            
+                            <p>Meetup.com had implemented an algorithmic system that contained a feedback loop for meetup recommendations. If, at the beginning, men indicate more interest in tech meetups than women, then the system would exacerbate the discrepancy in interest through feedback loops.</p>
+                            
+                            <blockquote><strong>What are the six types of bias in machine learning, according to Suresh and Guttag?</strong></blockquote>
+                            
+                            <p>The six types of bias are historical bias, representation bias, measurement bias, aggregation bias, evaluation bias, and deployment bias.</p>
+                            
+                            <blockquote><strong>Give two examples of historical race bias in the US.</strong></blockquote>
+                            
+                            <p>Historical bias is machine learning is simply bias taken from society in its current state. Examples of historical race bias in the US that affects blacks include disproportionately harsher sentences and higher bargaining prices for used cars.</p>
+                            
+                            <blockquote><strong>Where are most images in ImageNet from?</strong></blockquote>
+                            
+                            <p>Most images in the ImageNet dataset are from the US and other western countries. Therefore, images from different countries and cultures were inaccurately labeled at higher rates.</p>
+                            
+                            <blockquote><strong>In the paper “Does Machine Learning Automate Moral Hazard and Error?”, why is sinusitis found to be predictive of a stroke?</strong></blockquote>
+                            
+                            <p>There are presumably many more factors that are predictive of a stroke than sinusitis. Therefore, it is reasonable to assume that these factors are simply not in the health records used in the machine learning models. Perhaps, the people who really have the predictive factors of a stroke are more discriminated against (race, gender, poorness), which correlates to a lack of access to healthcare.</p>
+                            
+                            <blockquote><strong>What is representation bias?</strong></blockquote>
+                            
+                            <p>Representation bias is essentially the process of taking a discrepancy in representation (which is a historical bias) and exacerbating it.</p>
+                            
+                            <blockquote><strong>How are machines and people different, in terms of their use for making decisions?</strong></blockquote>
+                            
+                            <p>Machines and algorithmic systems often do not have an appeals process in place and are often used at scale.</p>
+                            
+                            <blockquote><strong>Is disinformation the same as “fake news”?</strong></blockquote>
+                            
+                            <p>Disinformation is not solely “fake” news, but a mixture of facts, half-truths, and deliberate lies. The combination of these types of information at a large scale make it difficult to discern the truth, which is the principle aim of disinformation.</p>
+                            
+                            <blockquote><strong>Why is disinformation through auto-generated text a particularly significant issue?</strong></blockquote>
+                            
+                            <p>Auto-generated text means that disinformation can be mass produced quickly without human input.</p>
+                            
+                            <blockquote><strong>What are the five ethical lenses described by the Markkula Center?</strong></blockquote>
+                            
+                            <p>These lenses are designed to cover a wide range of ethical considerations. The five ethical lenses are:</p>
+                            <ol>
+                                <li>The rights approach: are the rights respected of all of those who are at stake?</li>
+                                <li>The justice approach: are all people treated equally?</li>
+                                <li>The utilitarian approach: what option maximizes good and minimizes suffering?</li>
+                                <li>The common good approach: what option serves society at large instead certain members?</li>
+                                <li>The virtue approach: what option is reflective of the values that I strive to embody?</li>
+                            </ol>
+                            
+                            <blockquote><strong>Where is policy an appropriate tool for addressing data ethics issues?</strong></blockquote>
+                            
+                            <p>Policy is important for addressing the shortcomings of an economic system. In a capitalistic society, pursuing profits often causes significant societal and environmental issues. Policy can provide legal and economic incentives to reduce these issues.</p>                            
+
+						</div>
+					</div>
+
+				<%- include('../partials/footer') %>
+
+			</div>
+
+		<%- include('../partials/scripts') %>
+
+	</body>
+</html>

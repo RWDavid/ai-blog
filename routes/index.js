@@ -34,6 +34,10 @@ router.get('/fastai/chapter-2', function(req, res, next) {
   res.render('fastai/chapter-2');
 });
 
+router.get('/fastai/chapter-3', function(req, res, next) {
+  res.render('fastai/chapter-3');
+});
+
 router.get('/cat-or-dog', function(req, res, next) {
   res.render('cat-or-dog');
 });
